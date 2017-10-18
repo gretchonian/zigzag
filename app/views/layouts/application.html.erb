@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Zigzag</title>
+    <title>ZigZag Designs</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+   
   </head>
 
   <body>
-    <%= yield %>
+    <div id="flex-container">
+      <nav class="navbar">
+        <div class="row">
+          <div class="col">
+            <%= link_to root_path do%>
+              <%= image_tag "",  class: 'logo'%>
+            <% end %>
+          </div>
+          <div class="clearfix hidden-sm-down col-md-10">
+            <%= link_to 'ZigZag Designs', root_path, class: "navbar-brand" %>
+          </div>
+          <div class="clearfix hidden-md-up col-12">
+            <h2>ZigZag Designs</h2>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <% if notice.present? %>
+          <p class="alert alert-info"><%= notice %></p>
+        <%end%>
+        <% if alert.present? %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <%end%>
+      </div>
+      <%= yield %>
+     
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md text-center">
+              <u>CONTACT</u>
+              <li>Make an appointment and visit soon!</li>
+               <%= link_to "tel:+1-541-630-4720", class: 'phone' do%>
+                <i class="fa fa-phone"></i>
+                &nbsp;541-630-4720
+              <% end %>
+            </div>
+            <br/>
+            <div class="col-md text-center">
+              <u>MESSAGE</u>
+              <li>placholder</li>
+                <div class='email' data-toggle="modal" data-target="#myContactModal">
+                  <i class="fa fa-envelope"></i>&nbsp;&nbsp;By Appointment
+                </div>
+              <li>placholder</li>
+            </div>
+            <div class="credit col-12 text-center">
+              <%=link_to 'http://zigzagwebdesigns.com' do %>
+              website: zigzagwebdesigns.com
+              <%end%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+

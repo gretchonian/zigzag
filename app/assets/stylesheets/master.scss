@@ -1,0 +1,23 @@
+@import "bootstrap";
+@import "font-awesome";
+
+.background {
+  background: image_url("main.jpg")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 800px;
+}
+
+body {
+  font-family: 'amatic_scregular';
+  color: white;
+}
+.footer{
+  background-image: image_url("starchaser.jpg");
+}
+
+.navbar {
+  background-image: image_url("starchaser.jpg");
+}
