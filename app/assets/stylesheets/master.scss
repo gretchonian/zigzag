@@ -1,3 +1,7 @@
+/*
+ *= require jquery-ui
+ */
+
 @import "bootstrap";
 @import "font-awesome";
 
@@ -22,6 +26,16 @@ body a {
   
 }
 
+.hero-2{
+  background: image_url('portfolio.jpg')no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 600px;
+  
+}
+
 /*.flex-container {
   min-height: 100%;
   display: flex;
@@ -34,6 +48,7 @@ body a {
 
 .main {
   font-family: 'exolight';
+  height: 400px;
 }
 
 .navbar {

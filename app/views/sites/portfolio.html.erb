@@ -1,0 +1,46 @@
+<script>
+  $(function () {
+    var topBox = $('.top').hide();
+    var bottomBox = $('.bottom').hide();
+    $(window).scroll(function() {
+      // $(topBox).slideDown(4000);
+      $('.main').click( function() {
+        $(topBox).show("slide", { direction: "up" }, 6000) 
+        $(bottomBox).show("slide", {direction: "down"}, 6000, function() {
+          // animation complete
+        });
+      });
+    });
+  });  
+</script>
+
+<div class="hero-2">
+    <div class="col">
+      <h1>hello</h1>
+    </div>
+ 
+<div class="main container-fluid">
+  <div class="row justify-content-around top">
+    <!-- <div class="first_box"> -->
+      <!-- <div class="col-12"> -->
+      <div class="col-sm-5 white-box">
+        <p>this is the body container</p>
+      </div>
+      <div class="col-sm-5 white-box">
+        <p>this is the other half of the body container</p>
+      </div>
+    <!-- </div> -->
+    <!-- </div> -->
+  </div>
+  <div class="row justify-content-around bottom">
+    <!-- <div class="bottom"> -->
+    <div class="col-5 white-box">
+      <p>this is the body container</p>
+    </div>
+    <div class="col-5 white-box">
+      <p>this is the other half of the body container</p>
+    </div>
+  <!-- </div> -->
+</div>
+</div> 
+</div>
