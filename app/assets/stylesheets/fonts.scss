@@ -22,3 +22,24 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'exolight';
+    src: font_url('exo-light-webfont.woff2') format('woff2'),
+         font_url('exo-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'exolightitalic';
+    src: font_url('exo-lightitalic-webfont.woff2') format('woff2'),
+         font_url('exo-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
