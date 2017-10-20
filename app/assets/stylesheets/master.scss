@@ -47,8 +47,9 @@ body a {
 }*/
 
 .main {
-  font-family: 'exolight';
-  height: 400px;
+  font-family: 'exolight', san-serif;
+  min-height: 400px;
+  background: white;
 }
 
 .navbar {
