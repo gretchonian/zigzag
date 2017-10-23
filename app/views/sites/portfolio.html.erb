@@ -1,33 +1,59 @@
 <script>
   $(function () {
     var topBox = $('.top').hide();
-    // var bottomBox = $('.bottom').hide();
-    $('.main').click( function() {
+    var bottomBox = $('.bottom').hide();
+    $( '#next-step-arrow' ).click( function() {
+      $(window).scrollTop($('#apps').offset().top);
       $(topBox).show("slide", { direction: "up" }, 6000) 
       $(bottomBox).show("slide", {direction: "down"}, 6000, function() {
-        // animation complete
+      // animation complete
       });
     });
   });  
 </script>
 <div class="hero-2">
-  <div class="col">
-    <h1>hello</h1>
-  </div>
-  <div class="main container-fluid">
-    <br/>
-    <div class="row justify-content-around top">
-      <div class="col-sm-4 white-box">
-        <h4><u>Quote Generator</u></h4>
-        <p>A data-based powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and Github for version control and launched on Heroku</p>
+  <br/>
+  <br/>
+  <div class="container-fluid">
+    <div class="row justify-content-around">
+      <div class="col-8 white-box">
+        <h1>hello</h1>
+        <p>I'm sure there will be a lot of text here describing my applications - experience - and anything else.</p>
       </div>
-      <div class="col-sm-4 white-box">
-        <%= link_to 'https://splurty-gretchen-joyce.herokuapp.com' do %> 
-          <%= image_tag "splurty.png",  class: 'img-fluid'%>
-        <% end %> 
+    </div> 
+  </div>
+  <br/>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div id= "next-step-arrow" >
+          <i class="fa fa-arrow-circle-o-down fa-4x" aria-hidden="true"></i>
+        </div>
       </div>
     </div>
-    <hr />
+  </div>
+  
+</div>
+  <!-- <a href="main"></a> -->
+<div class="main container-fluid">
+  <br/>
+  <h3 id="apps" name="apps_test">Web Apps</h3>
+    <div class="row justify-content-around top">
+      <div class="col-sm-6 white-box">
+        <h4><u>Quote Generator</u></h4>
+        <p>A data-based powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and Github for version control and launched on Heroku</p>
+        <hr/>
+        <br/>
+        <br/>
+        <%= link_to 'https://splurty-gretchen-joyce.herokuapp.com' do %> 
+          <%= image_tag "splurty.png",  class: 'img-fluid'%>
+        <% end %>
+        <br/>
+        <br/>
+      </div>
+    </div>
+ 
     <div class="row justify-content-around bottom">
       <div class="col-sm-4 white-box">
         <h4><u>Nomster</u></h4>
@@ -39,7 +65,7 @@
         <% end %>
       </div>
     </div>
-    <hr />
+    
     <div class="row justify-content-around top">
       <div class="col-sm-4 white-box">
         <h4><u>Two-Sided Marketplace</u></h4>
@@ -51,7 +77,7 @@
         <% end %>
       </div>
     </div>
-    <hr />
+   
     <div class="row justify-content-around bottom">
       <div class="col-sm-4 white-box">
         <h4><u>Test Driven Development</u></h4>
@@ -63,11 +89,10 @@
         <% end %>
       </div>
     </div>
-    <hr />
+    
     <div class="row justify-content-around bottom">
       <div class="col-sm-4 white-box">
-        <h4>Single Page Todo Applications</h4><a href="https://todoster-g-joyce.herokuapp.com">
-        <image src="todoster.png" class="full-width"/></a>
+        <h4>Single Page Todo Applications</h4>
         <p>This single-page to-do application features a fluid user interface that by using JavaScript allows users to rapidly add dynamic content</p>
       </div>
       <div class="col-sm-4 white-box">
@@ -76,7 +101,7 @@
         <% end %>
       </div>
     </div>
-    <hr />
+    
     <div class="row justify-content-around bottom">
       <div class="col-sm-4 white-box">
         <h4><u>Chess Game - Agile Team Project</u></h4>
@@ -88,7 +113,7 @@
         <% end %>
       </div>
     </div>
-    <hr />
+    
     <div class="row justify-content-around bottom">
       <div class="col-sm-4 white-box">
         <h4><u>Accounting Business</u></h4>
@@ -100,7 +125,7 @@
         <% end %>
       </div>
     </div>
-    <hr />
+    
     <div class="row justify-content-around bottom">
       <div class="col-sm-4 white-box">
         <h4><u>Catering Business</u></h4>
@@ -112,5 +137,6 @@
         <% end %>
       </div>
     </div>
-  </div> 
-</div>
+  </div>
+</div> 
+

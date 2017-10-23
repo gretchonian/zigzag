@@ -5,6 +5,12 @@
 @import "bootstrap";
 @import "font-awesome";
 
+
+/*#arrow{
+  position: absolute; 
+  bottom: 0;
+}*/
+
 body {
   font-family: 'amatic_scregular';
   background-color: black;
@@ -14,6 +20,10 @@ body {
 
 body a {
   color: white;
+}
+
+body h3 {
+  color: black;
 }
 
 .hero {
