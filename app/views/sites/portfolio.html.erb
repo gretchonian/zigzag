@@ -1,77 +1,69 @@
 <script>
   $(function () {
     var downBox = $('.down').hide();
-    var rightBox = $('.right').hide();
-    // var obj = $(this).find('.white-box');
-    // console.log(obj);
     $(document).on('click', '#next-step-arrow', function(event) {
-      console.log(event);
       $('html, body').animate({
       scrollTop: $('#apps').offset().top
       }, 2000);
-
-      function showBox () {
       $(downBox).show("slide", {direction: 'down'}, 4000);
-      $(rightBox).show("slide", {direction: "right"}, 8000);
-
-      };
-      showBox();
-
-
-      // , function() {
-       // animation complete
-      // }); 
     });
-    // $( '#next-step-arrow' ).click(function(){ 
-    //   $(window).scrollTop($('#apps').offset().top);
-    //   // var obj = $('#apps-scroll');
-    //   console.log($(window));
-      // $('html, body').animate({
-      //   scrollTop: $('#end').offset().top
-      // }, 100000);
-
-      // $( this ).on ("mouseover", function(){
-      //   this.stop();
-      // })
-      // $(window).scrollTop($('#apps').offset().top);
-    // }); 
-  });
-  // $(document).on('click', '.box', function(event) {
-  //   $('html, body').animate({
-  //       scrollTop: $(event.target).offset().top 
-  //   }, 'slow');
-  
+  });  
 </script>
+
 <div class="hero-2">
   <br/>
   <br/>
   <div class="container-fluid">
     <div class="row justify-content-around">
-      <div class="col-8 white-box">
-        <h1>hello</h1>
-        <p>I'm sure there will be a lot of text here describing my applications - experience - and anything else.</p>
+      <div class="col-8 offset-2 white-box">
+        <div class="row">
+          <h1 class="col-12">Portfolio</h1>
+          <h4 class="col-12">Web applications created with some of the following tools:</h4>
+          <br/>
+          <br/>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col-md-8">
+            <%= image_tag "skills.png", class: "icons2 img-fluid"%>
+          </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
+          <h4 class="col-12">Proficient in the following applications:</h4>
+        </div>
+        <div class="row justify-content-around">
+          <div class="icons-box col-md-8 offset-md-2 text-center">
+            <i class="fa fa-github fa-2x col-3" aria-hidden="true"></i>
+            <i class="fa fa-trello fa-2x col-3" aria-hidden="true"></i>
+            <i class="fa fa-slack fa-2x col-3" aria-hidden="true"></i>
+            <br/>
+          </div>
+        </div>
       </div>
-    </div> 
+      <!-- <br/> -->
+    </div>
   </div>
-  <br/>
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 text-center">
-        <div id= "next-step-arrow" >
+        <div id= "next-step-arrow">
+          <br/>
+          <br/>
+          <h1>See Web Apps</h1>
           <i class="fa fa-arrow-circle-o-down fa-4x" aria-hidden="true"></i>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 <div class="main container-fluid">
   <br/>
   <br/>
   <h3 id="apps" class="text-center" "><u>Web Apps</u></h3>
   <br/>
   <br/>
-  <!-- <div id="apps-scroll"> -->
-
   <div class="row justify-content-around"> 
     <div class="col-sm-4 white-box down">
       <%= link_to 'https://flixter-grethen-j.herokuapp.com', class: 'text' do %>
@@ -191,6 +183,7 @@
       <% end %>
     </div> 
   </div>
+  <br/>
   <br/>
 </div>
 
