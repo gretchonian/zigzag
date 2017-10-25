@@ -58,12 +58,21 @@ body h3 {
 
 .main {
   font-family: 'exolight', san-serif;
-  min-height: 400px;
+  /*min-height: 200px;*/
   background: white;
 }
 
 .navbar {
   background-image: image_url("starchaser.jpg");
+}
+
+.text {
+  color: black;
+}
+
+.text:hover {
+  text-decoration: none;
+  color: black;
 }
 
 .white-box { 
@@ -78,4 +87,5 @@ body h3 {
   list-style: none;
   font-size: 20px;
   min-height: 40px;
+  position: relative;
 }

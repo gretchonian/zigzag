@@ -1,15 +1,46 @@
 <script>
   $(function () {
-    var topBox = $('.top').hide();
-    var bottomBox = $('.bottom').hide();
-    $( '#next-step-arrow' ).click( function() {
-      $(window).scrollTop($('#apps').offset().top);
-      $(topBox).show("slide", { direction: "up" }, 6000) 
-      $(bottomBox).show("slide", {direction: "down"}, 6000, function() {
-      // animation complete
-      });
+    var downBox = $('.down').hide();
+    var rightBox = $('.right').hide();
+    // var obj = $(this).find('.white-box');
+    // console.log(obj);
+    $(document).on('click', '#next-step-arrow', function(event) {
+      console.log(event);
+      $('html, body').animate({
+      scrollTop: $('#apps').offset().top
+      }, 2000);
+
+      function showBox () {
+      $(downBox).show("slide", {direction: 'down'}, 4000);
+      $(rightBox).show("slide", {direction: "right"}, 8000);
+
+      };
+      showBox();
+
+
+      // , function() {
+       // animation complete
+      // }); 
     });
-  });  
+    // $( '#next-step-arrow' ).click(function(){ 
+    //   $(window).scrollTop($('#apps').offset().top);
+    //   // var obj = $('#apps-scroll');
+    //   console.log($(window));
+      // $('html, body').animate({
+      //   scrollTop: $('#end').offset().top
+      // }, 100000);
+
+      // $( this ).on ("mouseover", function(){
+      //   this.stop();
+      // })
+      // $(window).scrollTop($('#apps').offset().top);
+    // }); 
+  });
+  // $(document).on('click', '.box', function(event) {
+  //   $('html, body').animate({
+  //       scrollTop: $(event.target).offset().top 
+  //   }, 'slow');
+  
 </script>
 <div class="hero-2">
   <br/>
@@ -23,7 +54,6 @@
     </div> 
   </div>
   <br/>
-  
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 text-center">
@@ -33,110 +63,135 @@
       </div>
     </div>
   </div>
-  
 </div>
-  <!-- <a href="main"></a> -->
 <div class="main container-fluid">
   <br/>
-  <h3 id="apps" name="apps_test">Web Apps</h3>
-    <div class="row justify-content-around top">
-      <div class="col-sm-6 white-box">
+  <br/>
+  <h3 id="apps" class="text-center" "><u>Web Apps</u></h3>
+  <br/>
+  <br/>
+  <!-- <div id="apps-scroll"> -->
+
+  <div class="row justify-content-around"> 
+    <div class="col-sm-4 white-box down">
+      <%= link_to 'https://flixter-grethen-j.herokuapp.com', class: 'text' do %>
+        <br/>
+        <h4><u>Two-Sided Marketplace</u></h4>
+        <p>A two-sided video-streaming marketplace platform that features credit card payment capabilities, user-role management, complex user interfaces, and advanced database relationships</p>
+        <hr/>
+        <br/>
+        <br/>
+        <%= image_tag "flixter.png",  class: 'img-fluid'%>
+        <br/>
+        <br/>
+      <% end %>
+    </div>
+    
+    <div class="col-sm-4 white-box down">
+      <%= link_to 'https://chess-pushthepiece.herokuapp.com', class: 'text' do %>
+        <br/>
+        <h4><u>Chess Game - Agile Team Project</u></h4>
+        <p>Working on an Agile software development team building a chess application. Under the guidance of a Senior Software Engineer, we have weekly Agile team meetings for code review, sprint planning, and feature assignments</p>
+        <hr/>
+        <br/>
+        <br/>
+        <%= image_tag "chess.png",  class: 'img-fluid'%>
+        <br/>
+        <br/>
+      <% end %>
+    </div>
+  </div>
+  <br/>
+  <div class="row justify-content-around"> 
+    <div class="col-sm-4 white-box down">
+      <%= link_to 'https://grammable-g-joyce.herokuapp.com', class: 'text' do %>
+        <br/>
+        <h4><u>Test-Driven Development</u></h4>
+        <p>An Instagram clone that was built using industry standard, test-driven development following numerous red/green refactor cycles</p>
+        <hr/>
+        <br/>
+        <br/>
+        <%= image_tag "grammable.png",  class: 'img-fluid'%>
+        <br/>
+        <br/>
+      <% end %>
+    </div>
+
+    <div class="col-sm-4 white-box down">
+      <%= link_to 'https://todoster-g-joyce.herokuapp.com', class: 'text' do %>
+        <br/>
+        <h4><u>Single Page Todo Applications</u></h4>
+        <p>This single-page to-do application features a fluid user interface that by using JavaScript allows users to rapidly add dynamic content</p>
+        <hr/>
+        <br/>
+        <br/>
+        <%= image_tag "todoster.png",  class: 'img-fluid'%>
+        <br/>
+        <br/>
+      <% end %>
+    </div>
+  </div>
+  <br/>
+  <div class="row justify-content-around"> 
+    <div class="col-sm-4 white-box down">
+      <%= link_to 'https://nomster-gretchen-j.herokuapp.com', class: "text" do %>
+        <br/>
+        <h4><u>Nomster</u></h4>
+        <p>A Yelp clone that integrates Google Maps API and includes features like user comments, star ratings, image uploading, and user authentification</p>
+        <hr/>
+        <br/>
+        <br/>
+        <%= image_tag "nomster.png",  class: 'img-fluid'%>
+        <br/>
+        <br/>
+      <% end %>
+    </div>
+ 
+    <div class="col-sm-4 white-box down">
+      <%= link_to 'https://chess-pushthepiece.herokuapp.com', class: 'text' do %>
+        <br/>
+        <h4><u>Catering Business</u></h4>
+        <p>Back and Front End work using Javascript, postgreSQL, Ruby on Rails, Bootstrap</p>
+        <hr/>
+        <br/>
+        <br/>
+        <%= image_tag "chess.png",  class: 'img-fluid'%>
+        <br/>
+        <br/>
+      <% end %>
+    </div>
+  </div>
+  <br />
+  <div class="row justify-content-around"> 
+    <div class="col-sm-4 white-box down">
+      <%= link_to 'https://chess-pushthepiece.herokuapp.com', class: 'text' do %>
+        <br/>
+        <h4><u>Accounting Business</u></h4>
+        <p>Full-Stack website development using postgreSQL, Bootstrap</p>
+        <hr/>
+        <br/>
+        <br/>
+        <%= image_tag "chess.png",  class: 'img-fluid'%>
+        <br/>
+        <br/>
+      <% end %>
+    </div>
+
+    <div class="col-sm-4 white-box down">
+      <%= link_to 'https://splurty-gretchen-joyce.herokuapp.com', class: 'text' do %>
+        <br/>
         <h4><u>Quote Generator</u></h4>
         <p>A data-based powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and Github for version control and launched on Heroku</p>
         <hr/>
         <br/>
         <br/>
-        <%= link_to 'https://splurty-gretchen-joyce.herokuapp.com' do %> 
-          <%= image_tag "splurty.png",  class: 'img-fluid'%>
-        <% end %>
+        <%= image_tag "splurty.png",  class: 'img-fluid'%>
         <br/>
         <br/>
-      </div>
-    </div>
- 
-    <div class="row justify-content-around bottom">
-      <div class="col-sm-4 white-box">
-        <h4><u>Nomster</u></h4>
-        <p>A Yelp clone that integrates Google Maps API and includes features like user comments, star ratings, image uploading, and user authentification</p>
-      </div>
-      <div class="col-sm-4 white-box">
-        <%= link_to 'https://nomster-gretchen-j.herokuapp.com' do %> 
-          <%= image_tag "nomster.png",  class: 'img-fluid'%>
-        <% end %>
-      </div>
-    </div>
-    
-    <div class="row justify-content-around top">
-      <div class="col-sm-4 white-box">
-        <h4><u>Two-Sided Marketplace</u></h4>
-        <p>A two-sided video-streaming marketplace platform that features credit card payment capabilities, user-role management, complex user interfaces, and advanced database relationships</p>
-      </div>
-      <div class="col-sm-4 white-box">
-        <%= link_to 'https://flixter-grethen-j.herokuapp.com' do %> 
-          <%= image_tag "flixter.png",  class: 'img-fluid'%>
-        <% end %>
-      </div>
-    </div>
-   
-    <div class="row justify-content-around bottom">
-      <div class="col-sm-4 white-box">
-        <h4><u>Test Driven Development</u></h4>
-        <p>An Instagram clone that was built using industry standard, test-driven development following numerous red/green refactor cycles</p>
-      </div>
-      <div class="col-sm-4 white-box">
-        <%= link_to 'https://grammable-g-joyce.herokuapp.com' do %> 
-          <%= image_tag "grammable.png",  class: 'img-fluid'%>
-        <% end %>
-      </div>
-    </div>
-    
-    <div class="row justify-content-around bottom">
-      <div class="col-sm-4 white-box">
-        <h4>Single Page Todo Applications</h4>
-        <p>This single-page to-do application features a fluid user interface that by using JavaScript allows users to rapidly add dynamic content</p>
-      </div>
-      <div class="col-sm-4 white-box">
-        <%= link_to 'https://todoster-g-joyce.herokuapp.com' do %>
-          <%= image_tag "todoster.png",  class: 'img-fluid'%>
-        <% end %>
-      </div>
-    </div>
-    
-    <div class="row justify-content-around bottom">
-      <div class="col-sm-4 white-box">
-        <h4><u>Chess Game - Agile Team Project</u></h4>
-        <p>Working on an Agile software development team building a chess application. Under the guidance of a Senior Software Engineer, we have weekly Agile team meetings for code review, sprint planning, and feature assignments</p>
-      </div>
-      <div class="col-sm-4 white-box">
-        <%= link_to 'https://chess-pushthepiece.herokuapp.com' do %>
-          <%= image_tag "chess.png",  class: 'img-fluid'%>
-        <% end %>
-      </div>
-    </div>
-    
-    <div class="row justify-content-around bottom">
-      <div class="col-sm-4 white-box">
-        <h4><u>Accounting Business</u></h4>
-        <p>Full-Stack website development using postgreSQL, Bootrap</p>
-      </div>
-      <div class="col-sm-4 white-box">
-        <%= link_to 'https://chess-pushthepiece.herokuapp.com' do %>
-          <%= image_tag "chess.png",  class: 'img-fluid'%>
-        <% end %>
-      </div>
-    </div>
-    
-    <div class="row justify-content-around bottom">
-      <div class="col-sm-4 white-box">
-        <h4><u>Catering Business</u></h4>
-        <p>Back and Front End work using Javascript, postgreSQL, Ruby on Rails, Bootstrap.</p>
-      </div>
-      <div class="col-sm-4 white-box">
-        <%= link_to 'https://chess-pushthepiece.herokuapp.com' do %>
-          <%= image_tag "chess.png",  class: 'img-fluid'%>
-        <% end %>
-      </div>
-    </div>
+      <% end %>
+    </div> 
   </div>
-</div> 
+  <br/>
+</div>
+
 
