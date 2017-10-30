@@ -1,18 +1,20 @@
 <script>
   $(function () {
-    // var downBox = $('.down').hide();
-    // var algBox = $('.alg').hide();
+    var downBox = $('.down').hide();
+    var algBox = $('.alg').hide();
     $(document).on('click', '#apps-arrow', function(event) {
       $('html, body').animate({
       scrollTop: $('#apps').offset().top
       }, 2000);
       $(downBox).show("slide", {direction: 'down'}, 4000);
+      $('#apps-arrow').hide();
     });
     $(document).on('click', '#alg-arrow', function(event) {
       $('html, body').animate({
       scrollTop: $('#algs').offset().top
       }, 2000);
-      $(algBox).show("slide", {direction: 'down'}, 4000);
+      $(algBox).show("slide", {}, 4000);
+      $('#alg-arrow').hide();
     });
   });  
 </script>
@@ -21,7 +23,7 @@
   <br/>
   <br/>
   <div class="container-fluid">
-    <div class="row justify-content-around">
+    <div class="row">
       <div class="col-8 offset-2 white-box">
         <div class="row">
           <h1 class="col-12"><u>Portfolio</u></h1>
@@ -43,7 +45,7 @@
         </div>
         <br/>
         <div class="row justify-content-around">
-          <div class="col-4">
+          <div class="col-md-4">
             <ul>
               <li>Heroku</li>
               <li>PostgreSQL</li>
@@ -53,7 +55,7 @@
               <li>Slack</li>
             </ul>
           </div>
-          <div class="col-4">
+          <div class="col-md-4">
             <ul>
               <li>Web APIs</li>
               <li>JQuery</li>
@@ -63,7 +65,7 @@
               <li>Code Climate</li>
             </ul>
           </div>
-          <div class="col-4">
+          <div class="col-md-4">
             <ul>
               <li>Bootstrap</li>
               <li>Agile Teams</li>
@@ -74,7 +76,6 @@
             </ul>
           </div>
         </div>
-        <br/>
       </div>
     </div>
   </div>
@@ -93,41 +94,7 @@
 </div>
 
 <div class="main container-fluid">
-  <br/>
-  <br/>
   <h3 id="apps" class="text-center"><u>Web Apps</u></h3>
-  <br/>
-  <br/>
-  <div class="row justify-content-around"> 
-    <div class="col-sm-4 white-box down">
-      <%= link_to 'https://flixter-grethen-j.herokuapp.com', class: 'text' do %>
-        <br/>
-        <h4><u>Two-Sided Marketplace</u></h4>
-        <p>A two-sided video-streaming marketplace platform that features credit card payment capabilities, user-role management, complex user interfaces, and advanced database relationships</p>
-        <hr/>
-        <br/>
-        <br/>
-        <%= image_tag "flixter.png",  class: 'img-fluid'%>
-        <br/>
-        <br/>
-      <% end %>
-    </div>
-    
-    <div class="col-sm-4 white-box down">
-      <%= link_to 'https://chess-pushthepiece.herokuapp.com', class: 'text' do %>
-        <br/>
-        <h4><u>Chess Game - Agile Team Project</u></h4>
-        <p>Worked with an Agile software development team to build a chess application. We had weekly Agile team meetings for code review, sprint planning, and feature assignments. App features JQuery and AJAX updates for moving the chess pieces.</p>
-        <hr/>
-        <br/>
-        <br/>
-        <%= image_tag "chess.png",  class: 'img-fluid'%>
-        <br/>
-        <br/>
-      <% end %>
-    </div>
-  </div>
-  <br/>
   <div class="row justify-content-around"> 
     <div class="col-sm-4 white-box down">
       <%= link_to 'https://grammable-g-joyce.herokuapp.com', class: 'text' do %>
@@ -217,8 +184,6 @@
       <% end %>
     </div> 
   </div>
-  <br/>
-  <br/>
   <div class="row">
     <div class="col-12 text-center">
       <div id= "alg-arrow">
@@ -229,19 +194,18 @@
       </div>
     </div>
   </div>
-  <br/>
-  <br/>
+</div>
+
+<div class="second container-fluid">
   <h3 id="algs" class="text-center down"><u>Algorithms</u>
-  <br/>
-  <br/>
-  <div class="row justify-content-around"> 
+  <div class="row"> 
   <!-- <hr / class="coolline"> -->
-    <div class="white-box col-8">
-      <h4>Linked List Challenge</h4>
+    <div class="green-box alg col-sm-8 offset-sm-2">
+      <h4><u>Linked List Challenge</u></h4>
       <p>Reverse a Linked List</p>
     </div>
         
-    <div class="white-box col-8">
+    <div class="col-sm-8 offset-sm-2 code alg text-left">
 <pre><code class="language-ruby">class Node
   attr_accessor :value, :next_node
 
@@ -256,7 +220,7 @@ def reverse_list(list, previous=nil)
     head = Node.new(list.value, head) 
     list = list.next_node
   end
-head
+  head
 end
 
 def print_values(list_node)
@@ -281,57 +245,63 @@ reverse = reverse_list(node3)
 
 print_values(reverse)</code></pre>      
     </div>
+  </div>
 
-    <!-- <br class ="clear"/> -->
-        
-    <div class="white-box col-8"> 
-      <h4> Ordinal Challenge </h4>
+
+    <br class =""/>
+  <div class="row">     
+    <div class="green-box alg col-sm-8 offset-sm-2"> 
+      <h4><u>Ordinal Challenge</u></h4>
       <p>Returns any number with a "nd" or a "rd", etc.</p>
     </div>
-    <div class="white-box col-8 "> 
+    <div class="code alg col-sm-8 offset-sm-2 text-left"> 
 <pre><code class="language-ruby">puts &quot;Enter a number&quot;
 number=gets.to_i
 
 def ordinal(number)
 lop_num = number%10
-    if number == 0
+  if number == 0
     return puts &quot;0&quot;
-    elsif lop_num==1 &amp;&amp; number!=11
+  elsif lop_num==1 &amp;&amp; number!=11
     return puts &quot;#{number}st&quot;
-    elsif lop_num==2 &amp;&amp; number !=12
+  elsif lop_num==2 &amp;&amp; number !=12
     return puts &quot;#{number}nd&quot;
-    elsif lop_num==3 &amp;&amp; number!=13
+  elsif lop_num==3 &amp;&amp; number!=13
     return puts &quot;#{number}rd&quot;
-    else lop_num&gt;=4 
+  else lop_num&gt;=4 
     return puts &quot;#{number}th&quot;
-   end
- end
+  end
+end
 ordinal(number)</code></pre>  
-    </div>    
-    <!-- <br class ="clear"/> -->
-    <div class="col-8 white-box"> 
-      <h4> Foobar Challenge </h4>
-      <p>Asks for use input and counts from 1 to user's number while adding "Foo", "Bar", or "Foobar", for numbers divisible by 3, 5, or both, respectivily</p>
     </div>
-    <div class="col-8 white-box">
+  </div>    
+    <br class =""/>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2 alg green-box"> 
+      <h4><u>Foobar Challenge</u></h4>
+      <p>Asks for user input and counts from 1 to user's number while adding "Foo", "Bar", or "Foobar", for numbers divisible by 3, 5, or both, respectivily</p>
+    </div>
+    <div class="col-sm-8 offset-sm-2 code alg text-left">
 <pre><code class="language-ruby">puts &quot;Enter a number:&quot;
 response = gets.to_i
 foobar = []
 (1..response).each do |n|
-    if n%3 == 0 &amp;&amp;  n%5 != 0
+  if n%3 == 0 &amp;&amp;  n%5 != 0
     foobar &lt;&lt; &quot;Foo&quot;
-    elsif n%5 == 0 &amp;&amp; n%3!=0
+  elsif n%5 == 0 &amp;&amp; n%3!=0
     foobar &lt;&lt; &quot;Bar&quot;
-    elsif n%3 == 0 &amp;&amp; n%5 == 0
+  elsif n%3 == 0 &amp;&amp; n%5 == 0
     foobar &lt;&lt; &quot;Foobar&quot;
-    else 
+  else 
     foobar &lt;&lt; n
-    end
+  end
 end
 puts foobar</code></pre>  
     </div>
-    <!-- <br class ="clear"/> -->
+    <br class =""/>
   </div>
+  <br/>
+  <br/>
 </div>
 
 

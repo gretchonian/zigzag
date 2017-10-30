@@ -15,6 +15,18 @@
   color: black;
 }
 
+.black-box { 
+  background: rgba(0, 0, 0, 0.4);
+  /*color: white;*/
+  padding: 80px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  /*font-family: 'Philosopher', sans-serif;*/
+  border-radius: 1%;
+  /*text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;*/
+}
+
 body {
   font-family: 'amatic_scregular';
   background-color: black;
@@ -32,6 +44,33 @@ body h3 {
 
 .bold {
   font-weight: 900;
+}
+
+.code {
+  background: rgba(0, 0, 0, 1);
+  color: white;
+  padding: 20px;
+  /*margin-top: 30px;*/
+  /*margin-bottom: 30px;*/
+  /*box-shadow: 0px 1px 3px #2a2a2a;*/
+  /*font-family: 'Philosopher', sans-serif;*/
+  /*border-radius: 1%;*/
+  /*text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;*/
+}
+
+.green-box { 
+  background: rgba(99, 193, 80, 0.7);
+  color: black;
+  padding: 20px;
+  /*margin: 10px;*/
+  /*box-shadow: 0px 1px 3px #2a2a2a;*/
+  font-family: 'exolight';
+  /*border-radius: 1%;*/
+  width: 100%;
+  /*list-style: none;*/
+  font-size: 20px;
+  min-height: 40px;
+  position: relative;
 }
 
 .hero {
@@ -67,11 +106,20 @@ body h3 {
 .body-container {
   flex: 1;
 }*/
+.language-ruby {
+  color: #FAFC5A;
+  font-size: 20px;
+}
 
 .main {
   font-family: 'exolight', san-serif;
   /*min-height: 200px;*/
-  background: white;
+  background: image_url("apps.jpg")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*min-height: 600px;*/
 }
 
 .navbar {
@@ -105,6 +153,11 @@ body h3 {
   position: relative;*/
 }
 
+.second {
+  background: white;
+  font-family: 'exolight', san-serif;
+}
+
 .text {
   color: black;
 }
@@ -118,7 +171,7 @@ body h3 {
   background: rgba(255, 255, 255, 0.7);
   color: black;
   padding: 20px;
-  margin: 10px;
+  /*margin: 10px;*/
   box-shadow: 0px 1px 3px #2a2a2a;
   font-family: 'exolight';
   border-radius: 1%;
@@ -127,4 +180,8 @@ body h3 {
   font-size: 20px;
   min-height: 40px;
   position: relative;
+}
+
+.white-text {
+  color: white;
 }
