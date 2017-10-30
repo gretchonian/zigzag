@@ -1,11 +1,18 @@
 <script>
   $(function () {
-    var downBox = $('.down').hide();
-    $(document).on('click', '#next-step-arrow', function(event) {
+    // var downBox = $('.down').hide();
+    // var algBox = $('.alg').hide();
+    $(document).on('click', '#apps-arrow', function(event) {
       $('html, body').animate({
       scrollTop: $('#apps').offset().top
       }, 2000);
       $(downBox).show("slide", {direction: 'down'}, 4000);
+    });
+    $(document).on('click', '#alg-arrow', function(event) {
+      $('html, body').animate({
+      scrollTop: $('#algs').offset().top
+      }, 2000);
+      $(algBox).show("slide", {direction: 'down'}, 4000);
     });
   });  
 </script>
@@ -17,11 +24,13 @@
     <div class="row justify-content-around">
       <div class="col-8 offset-2 white-box">
         <div class="row">
-          <h1 class="col-12">Portfolio</h1>
-          <h4 class="col-12">Web applications created with some of the following tools:</h4>
-          <br/>
-          <br/>
+          <h1 class="col-12"><u>Portfolio</u></h1>
         </div>
+        <br/>
+        <div class="row">
+          <h4 class="col-12">Web applications created with some of the following tools:</h4>
+        </div>
+        <br/>
         <div class="row justify-content-around">
           <div class="col-md-8">
             <%= image_tag "skills.png", class: "icons2 img-fluid"%>
@@ -32,25 +41,50 @@
         <div class="row">
           <h4 class="col-12">Proficient in the following applications:</h4>
         </div>
+        <br/>
         <div class="row justify-content-around">
-          <div class="icons-box col-md-8 offset-md-2 text-center">
-            <i class="fa fa-github fa-2x col-3" aria-hidden="true"></i>
-            <i class="fa fa-trello fa-2x col-3" aria-hidden="true"></i>
-            <i class="fa fa-slack fa-2x col-3" aria-hidden="true"></i>
-            <br/>
+          <div class="col-4">
+            <ul>
+              <li>Heroku</li>
+              <li>PostgreSQL</li>
+              <li>Object-Oriented Prog.</li>
+              <li>Github</li>
+              <li>TDD - Rspec</li>
+              <li>Slack</li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <ul>
+              <li>Web APIs</li>
+              <li>JQuery</li>
+              <li>AJAX</li>
+              <li>RESTful Routes</li>
+              <li>Node.js</li>
+              <li>Code Climate</li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <ul>
+              <li>Bootstrap</li>
+              <li>Agile Teams</li>
+              <li>Git</li>
+              <li>Amazon AWS S3</li>
+              <li>MVCs</li>
+              <li>Trello</li>
+            </ul>
           </div>
         </div>
+        <br/>
       </div>
-      <!-- <br/> -->
     </div>
   </div>
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 text-center">
-        <div id= "next-step-arrow">
+        <div id= "apps-arrow">
           <br/>
           <br/>
-          <h1>See Web Apps</h1>
+          <h1 class="bold">See Web Apps</h1>
           <i class="fa fa-arrow-circle-o-down fa-4x" aria-hidden="true"></i>
         </div>
       </div>
@@ -61,7 +95,7 @@
 <div class="main container-fluid">
   <br/>
   <br/>
-  <h3 id="apps" class="text-center" "><u>Web Apps</u></h3>
+  <h3 id="apps" class="text-center"><u>Web Apps</u></h3>
   <br/>
   <br/>
   <div class="row justify-content-around"> 
@@ -83,7 +117,7 @@
       <%= link_to 'https://chess-pushthepiece.herokuapp.com', class: 'text' do %>
         <br/>
         <h4><u>Chess Game - Agile Team Project</u></h4>
-        <p>Working on an Agile software development team building a chess application. Under the guidance of a Senior Software Engineer, we have weekly Agile team meetings for code review, sprint planning, and feature assignments</p>
+        <p>Worked with an Agile software development team to build a chess application. We had weekly Agile team meetings for code review, sprint planning, and feature assignments. App features JQuery and AJAX updates for moving the chess pieces.</p>
         <hr/>
         <br/>
         <br/>
@@ -140,14 +174,14 @@
     </div>
  
     <div class="col-sm-4 white-box down">
-      <%= link_to 'https://chess-pushthepiece.herokuapp.com', class: 'text' do %>
+      <%= link_to 'https://bbq-doug-ghrist.herokuapp.com', class: 'text' do %>
         <br/>
         <h4><u>Catering Business</u></h4>
-        <p>Back and Front End work using Javascript, postgreSQL, Ruby on Rails, Bootstrap</p>
+        <p>Full-Stack development using Javascript, postgreSQL, Ruby on Rails, and Bootstrap. Customers can create custom-orders and submit their entries for a quote.</p>
         <hr/>
         <br/>
         <br/>
-        <%= image_tag "chess.png",  class: 'img-fluid'%>
+        <%= image_tag "bbq.png",  class: 'img-fluid'%>
         <br/>
         <br/>
       <% end %>
@@ -156,14 +190,14 @@
   <br />
   <div class="row justify-content-around"> 
     <div class="col-sm-4 white-box down">
-      <%= link_to 'https://chess-pushthepiece.herokuapp.com', class: 'text' do %>
+      <%= link_to 'https://streamline-l-fleser.herokuapp.com', class: 'text' do %>
         <br/>
         <h4><u>Accounting Business</u></h4>
-        <p>Full-Stack website development using postgreSQL, Bootstrap</p>
+        <p>Full-Stack development using postgreSQL, Ruby on Rails, and Bootstrap. Clients can submit a request for more information about the business.</p>
         <hr/>
         <br/>
         <br/>
-        <%= image_tag "chess.png",  class: 'img-fluid'%>
+        <%= image_tag "streamline.png",  class: 'img-fluid'%>
         <br/>
         <br/>
       <% end %>
@@ -185,6 +219,119 @@
   </div>
   <br/>
   <br/>
+  <div class="row">
+    <div class="col-12 text-center">
+      <div id= "alg-arrow">
+        <br/>
+        <br/>
+        <h3 class="bold down">See Algorithms</h3>
+        <i class="fa fa-arrow-circle-o-down fa-4x down" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <h3 id="algs" class="text-center down"><u>Algorithms</u>
+  <br/>
+  <br/>
+  <div class="row justify-content-around"> 
+  <!-- <hr / class="coolline"> -->
+    <div class="white-box col-8">
+      <h4>Linked List Challenge</h4>
+      <p>Reverse a Linked List</p>
+    </div>
+        
+    <div class="white-box col-8">
+<pre><code class="language-ruby">class Node
+  attr_accessor :value, :next_node
+
+  def initialize(value, next_node=nil)
+    @value = value
+    @next_node = next_node
+  end
+end
+
+def reverse_list(list, previous=nil)
+  while list !=nil
+    head = Node.new(list.value, head) 
+    list = list.next_node
+  end
+head
+end
+
+def print_values(list_node)
+  if list_node
+    print "#{list_node.value} --> "
+    print_values(list_node.next_node)
+  else
+    print "nil\n"
+    return
+  end
+end
+
+node1 = Node.new(37)
+node2 = Node.new(99, node1)
+node3 = Node.new(12, node2)
+
+print_values(node3)
+
+puts "---------"
+
+reverse = reverse_list(node3)
+
+print_values(reverse)</code></pre>      
+    </div>
+
+    <!-- <br class ="clear"/> -->
+        
+    <div class="white-box col-8"> 
+      <h4> Ordinal Challenge </h4>
+      <p>Returns any number with a "nd" or a "rd", etc.</p>
+    </div>
+    <div class="white-box col-8 "> 
+<pre><code class="language-ruby">puts &quot;Enter a number&quot;
+number=gets.to_i
+
+def ordinal(number)
+lop_num = number%10
+    if number == 0
+    return puts &quot;0&quot;
+    elsif lop_num==1 &amp;&amp; number!=11
+    return puts &quot;#{number}st&quot;
+    elsif lop_num==2 &amp;&amp; number !=12
+    return puts &quot;#{number}nd&quot;
+    elsif lop_num==3 &amp;&amp; number!=13
+    return puts &quot;#{number}rd&quot;
+    else lop_num&gt;=4 
+    return puts &quot;#{number}th&quot;
+   end
+ end
+ordinal(number)</code></pre>  
+    </div>    
+    <!-- <br class ="clear"/> -->
+    <div class="col-8 white-box"> 
+      <h4> Foobar Challenge </h4>
+      <p>Asks for use input and counts from 1 to user's number while adding "Foo", "Bar", or "Foobar", for numbers divisible by 3, 5, or both, respectivily</p>
+    </div>
+    <div class="col-8 white-box">
+<pre><code class="language-ruby">puts &quot;Enter a number:&quot;
+response = gets.to_i
+foobar = []
+(1..response).each do |n|
+    if n%3 == 0 &amp;&amp;  n%5 != 0
+    foobar &lt;&lt; &quot;Foo&quot;
+    elsif n%5 == 0 &amp;&amp; n%3!=0
+    foobar &lt;&lt; &quot;Bar&quot;
+    elsif n%3 == 0 &amp;&amp; n%5 == 0
+    foobar &lt;&lt; &quot;Foobar&quot;
+    else 
+    foobar &lt;&lt; n
+    end
+end
+puts foobar</code></pre>  
+    </div>
+    <!-- <br class ="clear"/> -->
+  </div>
 </div>
 
 

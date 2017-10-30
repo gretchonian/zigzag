@@ -11,6 +11,10 @@
   bottom: 0;
 }*/
 
+#alg-arrow {
+  color: black;
+}
+
 body {
   font-family: 'amatic_scregular';
   background-color: black;
@@ -24,6 +28,10 @@ body a {
 
 body h3 {
   color: black;
+}
+
+.bold {
+  font-weight: 900;
 }
 
 .hero {
@@ -45,6 +53,10 @@ body h3 {
   min-height: 600px;
   
 }
+
+/*img {
+ max-height: 40px; 
+}*/
 
 /*.flex-container {
   min-height: 100%;
