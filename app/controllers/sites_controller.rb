@@ -6,4 +6,12 @@ class SitesController < ApplicationController
   def portfolio
     
   end
+
+  def code
+
+  end
+
+  def resume
+    
+  end
 end

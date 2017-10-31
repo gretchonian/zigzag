@@ -1,0 +1,102 @@
+<div class="second">
+  <div class="container-fluid">
+    <div class="row"> 
+      <div class="green-box alg col-sm-8 offset-sm-2">
+        <h4><u>Linked List Challenge</u></h4>
+        <p>Reverse a Linked List</p>
+      </div>
+          
+      <div class="col-sm-8 offset-sm-2 code alg text-left">
+<pre><code class="language-ruby">class Node
+  attr_accessor :value, :next_node
+
+  def initialize(value, next_node=nil)
+    @value = value
+    @next_node = next_node
+  end
+end
+
+def reverse_list(list, previous=nil)
+  while list !=nil
+    head = Node.new(list.value, head) 
+    list = list.next_node
+  end
+  head
+end
+
+def print_values(list_node)
+  if list_node
+    print "#{list_node.value} --> "
+    print_values(list_node.next_node)
+  else
+    print "nil\n"
+    return
+  end
+end
+
+node1 = Node.new(37)
+node2 = Node.new(99, node1)
+node3 = Node.new(12, node2)
+
+print_values(node3)
+
+puts "---------"
+
+reverse = reverse_list(node3)
+
+print_values(reverse)</code></pre>      
+      </div>
+    </div>
+    <br class =""/>
+    <div class="row">     
+      <div class="green-box alg col-sm-8 offset-sm-2"> 
+        <h4><u>Ordinal Challenge</u></h4>
+        <p>Returns any number with a "nd" or a "rd", etc.</p>
+      </div>
+      <div class="code alg col-sm-8 offset-sm-2 text-left"> 
+<pre><code class="language-ruby">puts &quot;Enter a number&quot;
+number=gets.to_i
+
+def ordinal(number)
+lop_num = number%10
+  if number == 0
+    return puts &quot;0&quot;
+  elsif lop_num==1 &amp;&amp; number!=11
+    return puts &quot;#{number}st&quot;
+  elsif lop_num==2 &amp;&amp; number !=12
+    return puts &quot;#{number}nd&quot;
+  elsif lop_num==3 &amp;&amp; number!=13
+    return puts &quot;#{number}rd&quot;
+  else lop_num&gt;=4 
+    return puts &quot;#{number}th&quot;
+  end
+end
+ordinal(number)</code></pre>  
+      </div>
+    </div>    
+    <br class =""/>
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2 alg green-box"> 
+        <h4><u>Foobar Challenge</u></h4>
+        <p>Asks for user input and counts from 1 to user's number while adding "Foo", "Bar", or "Foobar", for numbers divisible by 3, 5, or both, respectivily</p>
+      </div>
+      <div class="col-sm-8 offset-sm-2 code alg text-left">
+<pre><code class="language-ruby">puts &quot;Enter a number:&quot;
+response = gets.to_i
+foobar = []
+(1..response).each do |n|
+  if n%3 == 0 &amp;&amp;  n%5 != 0
+    foobar &lt;&lt; &quot;Foo&quot;
+  elsif n%5 == 0 &amp;&amp; n%3!=0
+    foobar &lt;&lt; &quot;Bar&quot;
+  elsif n%3 == 0 &amp;&amp; n%5 == 0
+    foobar &lt;&lt; &quot;Foobar&quot;
+  else 
+    foobar &lt;&lt; n
+  end
+end
+puts foobar</code></pre>  
+      </div>
+    </div>
+  </div>
+</div>

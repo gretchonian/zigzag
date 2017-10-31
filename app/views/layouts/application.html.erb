@@ -7,26 +7,29 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"> -->
   </head>
 
   <body>
     <div id="flex-container">
       <nav class="navbar">
         <div class="row">
-          <div class="col">
-            <%= link_to root_path do%>
-              <%= image_tag "",  class: 'logo'%>
-            <% end %>
-          </div>
-          <div class="clearfix hidden-sm-down col-md-10">
-            <%= link_to 'ZigZag Designs', root_path, class: "navbar-brand" %>
-          </div>
-          <div class="clearfix hidden-md-up col-10">
-            <h2>ZigZag Designs</h2>
+          <div class="col-md-10 align-self-center">
+            <%= link_to 'ZigZag Designs', root_path, class: "h1" %>
           </div>
           <div class="col">
-            <%= link_to "Portfolio", portfolio_path %>
+            <ul class="navbar-links">
+              <li>
+                <%= link_to "Portfolio", portfolio_path, class: "float-right" %>
+              </li>
+              <br />
+              <li>
+                <%= link_to "Code Samples", code_path, class: "float-right" %>
+              </li>
+               <br />
+              <li>
+                <%= link_to "Resume", resume_path, class: "float-right" %>
+              </li>
           </div>
         </div>
       </nav>
@@ -44,25 +47,19 @@
           <div class="row">
             <div class="col-md text-center">
               <u>CONTACT</u>
-              <li>Make an appointment and visit soon!</li>
+              <div>
                <%= link_to "tel:+1-541-630-4720", class: 'phone' do%>
                 <i class="fa fa-phone"></i>
                 &nbsp;541-630-4720
               <% end %>
+              </div>
             </div>
             <br/>
             <div class="col-md text-center">
               <u>MESSAGE</u>
-              <li>placholder</li>
                 <div class='email' data-toggle="modal" data-target="#myContactModal">
-                  <i class="fa fa-envelope"></i>&nbsp;&nbsp;By Appointment
+                  <i class="fa fa-envelope"></i>&nbsp;&nbsp;Email
                 </div>
-              <li>placholder</li>
-            </div>
-            <div class="credit col-12 text-center">
-              <%=link_to 'http://zigzagwebdesigns.com' do %>
-              website: zigzagwebdesigns.com
-              <%end%>
             </div>
           </div>
         </div>

@@ -90,6 +90,8 @@ body h3 {
   -o-background-size: cover;
   background-size: cover;
   min-height: 600px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   
 }
 
@@ -112,6 +114,11 @@ body h3 {
 }
 
 .main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.main-2 {
   font-family: 'exolight', san-serif;
   /*min-height: 200px;*/
   background: image_url("apps.jpg")no-repeat center center fixed;
@@ -120,10 +127,16 @@ body h3 {
   -o-background-size: cover;
   background-size: cover;
   /*min-height: 600px;*/
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .navbar {
   background-image: image_url("starchaser.jpg");
+}
+
+.navbar-links {
+  list-style: none;
 }
 
 .icons2 {
@@ -137,25 +150,27 @@ body h3 {
 }
 
 .icons-box {
-  background: white;
+  /*background: white;*/
   /*color: black;*/
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 10px;
-  box-shadow: 0px 1px 3px #2a2a2a;
-  max-width: 516px;
+  /*padding-top: 10px;*/
+  /*padding-bottom: 10px;*/
+  /*margin: 10px;*/
+  /*box-shadow: 0px 1px 3px #2a2a2a;*/
+  /*max-width: 516px;*/
   /*font-family: 'exolight';*/
   /*border-radius: 1%;*/
   /*width: 100%;*/
-  /*list-style: none;*/
+  list-style: none;
   /*font-size: 20px;
   min-height: 40px;
   position: relative;*/
 }
 
 .second {
-  background: white;
-  font-family: 'exolight', san-serif;
+  background-image: url('second.png');
+  padding-top: 40px;
+  padding-bottom: 40px;
+  min-height: 600px;
 }
 
 .text {
