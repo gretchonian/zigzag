@@ -6,32 +6,23 @@
 @import "font-awesome";
 
 
-/*#arrow{
-  position: absolute; 
-  bottom: 0;
-}*/
-
 #alg-arrow {
   color: black;
 }
 
 .black-box { 
   background: rgba(0, 0, 0, 0.4);
-  /*color: white;*/
   padding: 80px;
   margin-top: 30px;
   margin-bottom: 30px;
   box-shadow: 0px 1px 3px #2a2a2a;
-  /*font-family: 'Philosopher', sans-serif;*/
   border-radius: 1%;
-  /*text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;*/
 }
 
 body {
-  font-family: 'amatic_scregular';
+  font-family: 'amatic_scregular', san-serif;
   background-color: black;
   color: white;
-  /*min-height: 100%;*/
 }
 
 body a {
@@ -50,24 +41,14 @@ body h3 {
   background: rgba(0, 0, 0, 1);
   color: white;
   padding: 20px;
-  /*margin-top: 30px;*/
-  /*margin-bottom: 30px;*/
-  /*box-shadow: 0px 1px 3px #2a2a2a;*/
-  /*font-family: 'Philosopher', sans-serif;*/
-  /*border-radius: 1%;*/
-  /*text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;*/
 }
 
 .green-box { 
   background: rgba(99, 193, 80, 0.7);
   color: black;
   padding: 20px;
-  /*margin: 10px;*/
-  /*box-shadow: 0px 1px 3px #2a2a2a;*/
-  font-family: 'exolight';
-  /*border-radius: 1%;*/
+  font-family: 'exolight', san-serif;
   width: 100%;
-  /*list-style: none;*/
   font-size: 20px;
   min-height: 40px;
   position: relative;
@@ -95,19 +76,6 @@ body h3 {
   
 }
 
-/*img {
- max-height: 40px; 
-}*/
-
-/*.flex-container {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.body-container {
-  flex: 1;
-}*/
 .language-ruby {
   color: #FAFC5A;
   font-size: 20px;
@@ -120,13 +88,11 @@ body h3 {
 
 .main-2 {
   font-family: 'exolight', san-serif;
-  /*min-height: 200px;*/
   background: image_url("apps.jpg")no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /*min-height: 600px;*/
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -150,20 +116,7 @@ body h3 {
 }
 
 .icons-box {
-  /*background: white;*/
-  /*color: black;*/
-  /*padding-top: 10px;*/
-  /*padding-bottom: 10px;*/
-  /*margin: 10px;*/
-  /*box-shadow: 0px 1px 3px #2a2a2a;*/
-  /*max-width: 516px;*/
-  /*font-family: 'exolight';*/
-  /*border-radius: 1%;*/
-  /*width: 100%;*/
   list-style: none;
-  /*font-size: 20px;
-  min-height: 40px;
-  position: relative;*/
 }
 
 .icons-box a {
@@ -191,7 +144,6 @@ body h3 {
   background: rgba(255, 255, 255, 0.7);
   color: black;
   padding: 20px;
-  /*margin: 10px;*/
   box-shadow: 0px 1px 3px #2a2a2a;
   font-family: 'exolight';
   border-radius: 1%;
