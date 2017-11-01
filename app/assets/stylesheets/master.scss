@@ -19,10 +19,16 @@
   border-radius: 1%;
 }
 
+/*html {
+  height: 100vh;
+
+}*/
+
 body {
   font-family: 'amatic_scregular', san-serif;
   background-color: black;
   color: white;
+  /*height: 100vh;*/
 }
 
 body a {
@@ -129,6 +135,18 @@ body h3 {
   padding-top: 40px;
   padding-bottom: 40px;
   min-height: 600px;
+}
+
+.resume {
+  background: image_url('resumepic.jpg')no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  min-height: 100vh;
+  /*position: absolute;*/
 }
 
 .text {

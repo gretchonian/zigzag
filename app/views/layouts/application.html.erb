@@ -44,7 +44,7 @@
       </div>
       <%= yield %>
       <div class="footer">
-        <div class="container">
+        <div class="footer_all container">
           <div class="row">
             <div class="col-md text-center">
               <u>CONTACT</u>
@@ -60,6 +60,22 @@
               <div>
                 <%= link_to "mailto:gretchen@zigzagwebdesigns.com" do %> 
                   <i class="fa fa-envelope"></i>&nbsp;&nbsp;Email
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md text-center">
+              <u>PORTFOLIO</u>
+              <div>
+                <%= link_to portfolio_path do %> 
+                  <i class="fa fa-file-powerpoint-o"></i>&nbsp;&nbsp;Web Applications
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md text-center">
+              <u>CODE</u>
+              <div>
+                <%= link_to code_path do %> 
+                  <i class="fa fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;Code Samples
                 <% end %>
               </div>
             </div>
