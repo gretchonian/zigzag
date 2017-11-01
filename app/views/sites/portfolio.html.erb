@@ -2,15 +2,43 @@
   $(function () {
     var downBox = $('.down').hide();
     var mainBox = $('.main-2').hide();
-    $(document).on('click', '#apps-arrow', function(event) {
+    var s = $('#apps-arrow');
+    touchStart = function (evt) {
+        evt.preventDefault();
+        $(this).addClass("touched");
+    };
+
+    touchEnd = function (evt) {
+        evt.preventDefault();
+        $(this).removeClass("touched");
+    };
+
+    s.ontouchstart = touchStart;
+    s.ontouchend = touchEnd;
+    s.ontouchmove = touchEnd;
+    $(s).bind("touchstart mousedown", function (e) {
+      console.log(e.type); // to get the name of the event
       $(mainBox).show();
       $('html, body').animate({
       scrollTop: $('.main-2').offset().top
       }, 2000);
       $(downBox).show("slide", {direction: 'down'}, 4000);
-      $('#apps-arrow').hide();
+      $(s).hide();
+    // }).bind("touchmove mousemove", function (e) {
+    //   console.log(e.type);
+    // }).bind("touchend mouseup", function (e) {
+    //   console.log(e.type);
     });
-  });  
+  });
+  //   $(document).on('click', '#apps-arrow', function(event) {
+  //     $(mainBox).show();
+  //     $('html, body').animate({
+  //     scrollTop: $('.main-2').offset().top
+  //     }, 2000);
+  //     $(downBox).show("slide", {direction: 'down'}, 4000);
+  //     $('#apps-arrow').hide();
+  //   });
+  // });  
 </script>
 
 <div class="hero-2">
