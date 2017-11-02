@@ -4,11 +4,16 @@
       <div class="col-sm-8 col-10 white-box">
         <h1>Gretchen Joyce</h1>
         <h2>SOFTWARE DEVELOPER</h2>
-        <hr / class="line">
-        <p class="bio">I am a Software Developer who loves working with Ruby on Rails and solving complex problems. I have learned to program thru the amazing open-source community, and with some help from my friends over at The Firehose Project. I have built numerous applications, with a versatile range of features. Take a look at my <%= link_to "portfolio", portfolio_path%>.</p>
+        <hr />
+        <p>I am a Software Developer who loves working with Ruby on Rails and solving complex problems. I have learned to program thru the amazing open-source community, and with some help from my friends over at The Firehose Project. I have built numerous applications, with a versatile range of features. Take a look at my <span class="bold"><%= link_to "portfolio", portfolio_path%></span>.</p>
         <p>Prior to working with computers, I graduated from Montana State University (in Bozeman!) with a Bachelor's of Science in Chemical Engineering. I was fortunate enough to focus on Material Science during my time at MSU. After college, I spent 11 years as a Chemical Engineer in various industries including: petrochemical, medical products, nanomaterials, and specialty gases.</p>
         <p>I live in Southern Oregon, and love it here. You can find me here stumbling around my Mac, or hiking up one of our many, beautiful mountains, or enjoying coffee on one of our sunny days!</p>
-        <p>Looking for remote work: contract, part-time, or full-time. Contact me today!</p>
+        <p>Looking for remote work: contract, part-time, or full-time.</p>
+        <div class="contact text-center">
+          <%= link_to 'mailto:gretchen@zigzagwebdesigns.com', class: 'btn btn-success' do %>
+            Contact me today! 
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
