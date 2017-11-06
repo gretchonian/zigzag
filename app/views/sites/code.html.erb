@@ -47,7 +47,11 @@ puts "---------"
 
 reverse = reverse_list(node3)
 
-print_values(reverse)</code></pre>      
+print_values(reverse)
+
+=>12 --> 99 --> 37 --> nil
+---------
+37 --> 99 --> 12 --> nil</code></pre>      
         </div>
       </div>
       <div class="alg col-md-4">   
@@ -97,7 +101,11 @@ puts "---------"
 
 reverse = reverse_list(node3)
 
-print_values(reverse)</code></pre>  
+print_values(reverse)
+
+=>12 --> 99 --> 37 --> nil
+---------
+37 --> 99 --> 12 --> nil</code></pre>  
         </div>
       </div>
       <div class="alg col-md-4">   
@@ -142,7 +150,7 @@ class Deck
 
   def deal
     @cards.each do |deal|
-    deal.output_card
+      deal.output_card
     end
   end
   
@@ -154,7 +162,10 @@ end
 
 dealer = Deck.new
 dealer.shuffle
-dealer.deal_one.output_card</code></pre>  
+dealer.deal_one.output_card
+
+=>3 of Clubs
+=>9 of Hearts</code></pre>  
         </div>
       </div>
     </div>       
@@ -183,7 +194,11 @@ foobar = []
     foobar &lt;&lt; n
   end
 end
-puts foobar</code></pre>      
+print foobar.join(', ')
+
+=>Enter a number:
+=>8
+=>1, 2, Foo, 4, Bar, Foo, 7, 8</code></pre>      
         </div>
       </div>
       <div class="alg col-md-4">   
@@ -209,7 +224,11 @@ lop_num = number%10
     return puts &quot;#{number}th&quot;
   end
 end
-ordinal(number)</code></pre>  
+ordinal(number)
+
+=>Enter a number:
+=>11
+=>11th</code></pre>  
         </div>
       </div>
       <div class="alg col-md-4">   
@@ -236,7 +255,14 @@ ordinal(number)</code></pre>
   def self.reverse_digits(number)
     number.to_s.chars.map(&:to_i).reverse
   end
-end</code></pre>  
+end
+
+expect(Luhn.is_valid?(4194560385008504)).to be true
+expect(Luhn.is_valid?(4194560385008505)).to be false
+$ bundle exec rspec
+=>2 examples, 0 failures
+
+</code></pre>  
         </div>
       </div>
     </div>
