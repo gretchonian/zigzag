@@ -53,6 +53,13 @@ body h3 {
   color: white;
 }
 
+.gj {
+  height: 200px;
+  border-radius: 25%;
+  border-style: solid; 
+  border-color: black;
+  }
+
 .green-box { 
   background: rgba(99, 193, 80, 0.7);
   color: black;
@@ -62,6 +69,10 @@ body h3 {
   width: 100%;
   font-size: 20px;
   min-height: 150px;
+}
+
+.header h1 {
+  font-size: 60px;
 }
 
 .hero {

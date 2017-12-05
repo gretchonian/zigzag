@@ -13,13 +13,17 @@
 
   <body>
     <div id="flex-container">
-      <nav class="navbar">
+      <nav class="navbar sticky-top">
         <div class="row">
           <div class="col-md-10 align-self-center">
             <%= link_to 'ZigZag Designs', root_path, class: "h1" %>
           </div>
           <div class="col">
             <ul class="navbar-links">
+              <li>
+                <%= link_to "Home", root_path, class: "float-right" %>
+              </li>
+              <br/>
               <li>
                 <%= link_to "Portfolio", portfolio_path, class: "float-right" %>
               </li>
