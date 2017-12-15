@@ -15,17 +15,20 @@
     <div id="flex-container">
       <nav class="navbar sticky-top">
         <div class="row">
-          <div class="col-md-10 align-self-center">
+          <div class="col-md-1 clearfix hidden-sm-down">
+            <%= image_tag "zigzag.png", class: "zigpic image-fluid"%>
+          </div>
+          <div class="col-md-10">
             <%= link_to 'ZigZag Designs', root_path, class: "h1 logo" %>
           </div>
-          <div class="col-md-2 clearfix hidden-sm-down">
+          <div class="col-md-1 clearfix hidden-sm-down">
             <ul class="navbar-links">
               <li>
-                <%= link_to "Home", root_path, class: "float-right" %>
+                <%= link_to "Home", root_path, class: "float-right navbar-link" %>
               </li>
               <br/>
               <li>
-                <%= link_to "Portfolio", portfolio_path, class: "float-right" %>
+                <%= link_to "Portfolio", portfolio_path, class: "float-right navbar-link" %>
               </li>
             </ul>
           </div>
