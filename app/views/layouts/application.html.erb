@@ -16,9 +16,9 @@
       <nav class="navbar sticky-top">
         <div class="row">
           <div class="col-md-10 align-self-center">
-            <%= link_to 'ZigZag Designs', root_path, class: "h1" %>
+            <%= link_to 'ZigZag Designs', root_path, class: "h1 logo" %>
           </div>
-          <div class="col">
+          <div class="col-md-2 clearfix hidden-sm-down">
             <ul class="navbar-links">
               <li>
                 <%= link_to "Home", root_path, class: "float-right" %>
@@ -31,10 +31,7 @@
               <li>
                 <%= link_to "Code Samples", code_path, class: "float-right" %>
               </li>
-               <br />
-              <li>
-                <%= link_to "Resume", resume_path, class: "float-right" %>
-              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -45,8 +42,10 @@
         <% if alert.present? %>
           <p class="alert alert-danger"><%= alert %></p>
         <%end%>
-      </div>
+      </div> 
       <%= yield %>
+      
+    </div>
       <div class="footer">
         <div class="footer_all container">
           <div class="row">
@@ -67,6 +66,7 @@
                 <% end %>
               </div>
             </div>
+            <br/>
             <div class="col-md text-center">
               <u>PORTFOLIO</u>
               <div>
@@ -75,6 +75,7 @@
                 <% end %>
               </div>
             </div>
+            <br/>
             <div class="col-md text-center">
               <u>CODE</u>
               <div>
@@ -83,18 +84,11 @@
                 <% end %>
               </div>
             </div>
-            <div class="col-md text-center">
-              <u>RESUME</u>
-              <div>
-                <%= link_to resume_path do %> 
-                  <i class="fa fa-code" aria-hidden="true"></i>&nbsp;&nbsp;Resume
-                <% end %>
-              </div>
-            </div>
+            <br/>
           </div>
         </div>
       </div>
-    </div>
+   
   </body>
 </html>
 

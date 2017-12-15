@@ -1,24 +1,75 @@
-<div class="hero">
+<div class="hero-2">
   <div class="main container-fluid">
-    <div class="row justify-content-around">
-      <div class="col-sm-8 col-10 white-box">
-        <div class="row align-items-center">
-          <div class="col-sm-4">
-            <%= image_tag "gj.jpg",  class: 'mx-auto d-block gj'%>
-          </div>
-          <br/>
-          <div class="col-sm-8 header">
-            <h1>Gretchen Joyce</h1>
-            <h2>SOFTWARE DEVELOPER</h2>
-          </div>
+    <div class="row">
+      <div class="col-8 offset-2 white-box">
+        <div class="col-sm-8 header">
+            <h1>ZigZag Designs</h1>
+            <h2>SOFTWARE DEVELOPMENT</h2>
         </div>
         <hr />
         <br/>
-        <p>I am a Software Developer who loves working with Ruby on Rails and solving complex problems. I have learned to program thru the amazing open-source community, and with some help from my friends over at The Firehose Project. I have built numerous applications, with a versatile range of features. Take a look at my <span class="bold"><%= link_to "portfolio", portfolio_path%></span>.</p>
-        <p>Prior to working with computers, I graduated from Montana State University (in Bozeman!) with a Bachelor's of Science in Chemical Engineering. I was fortunate enough to focus on Material Science during my time at MSU. After college, I spent 11 years as a Chemical Engineer in various industries including: petrochemical, medical products, nanomaterials, and specialty gases.</p>
-        <p>I live in Southern Oregon, and love it here. You can find me here stumbling around my Mac, or hiking up one of our many, beautiful mountains, or enjoying coffee on one of our sunny days!</p>
-        <p>Looking for remote work: contract, part-time, or full-time.</p>
+        <div class="row">
+          <%= link_to portfolio_path do %>
+            <h1 class="col-12 portfolio"><u>Portfolio</u></h1>
+          <% end %>
+        </div>
+        <br/>
+        <div class="row">
+          <h4 class="col-12">Web applications created with some of the following tools:</h4>
+        </div>
+        <br/>
+        <div class="row justify-content-around">
+          <div class="col-md-8">
+            <%= image_tag "skills.png", class: "icons2 img-fluid"%>
+          </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
+          <h4 class="col-12">Proficient in the following applications:</h4>
+        </div>
+        <br/>
+        <div class="row justify-content-around">
+          <div class="col-md-4">
+            <ul>
+              <li>Heroku</li>
+              <li>PostgreSQL</li>
+              <li>Object-Oriented Prog.</li>
+              <li>Github</li>
+              <li>TDD - Rspec</li>
+              <li>Slack</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li>Web APIs</li>
+              <li>JQuery</li>
+              <li>AJAX</li>
+              <li>RESTful Routes</li>
+              <li>Node.js</li>
+              <li>Code Climate</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li>Bootstrap</li>
+              <li>Agile Teams</li>
+              <li>Git</li>
+              <li>Amazon AWS S3</li>
+              <li>MVCs</li>
+              <li>Trello</li>
+            </ul>
+          </div>
+        </div>
+        <br/>
         <div class="contact text-center">
+          <%= link_to "Browse my Portfolio!", portfolio_path, class: "btn btn-success"%>
+        </div>
+        <br/>
+        <div class="contact text-center">
+        
+          <p>Looking for remote work: contract, part-time, or full-time.</p>
+        
           <%= link_to 'mailto:gretchen@zigzagwebdesigns.com', class: 'btn btn-success' do %>
             Contact me today! 
           <% end %>
@@ -27,3 +78,4 @@
     </div>
   </div>
 </div>
+

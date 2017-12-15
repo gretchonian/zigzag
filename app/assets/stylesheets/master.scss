@@ -100,6 +100,11 @@ body h3 {
   font-size: 15px;
 }
 
+.logo {
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+  font-size: 50px;
+}
+
 .main {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -108,6 +113,7 @@ body h3 {
 
 .main a {
   color: rgba(99, 193, 80, 1);
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
 
@@ -128,6 +134,8 @@ body h3 {
 
 .navbar-links {
   list-style: none;
+  font-size: 20px;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
 .icons2 {

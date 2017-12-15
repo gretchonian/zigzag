@@ -11,7 +11,4 @@ class SitesController < ApplicationController
 
   end
 
-  def resume
-    
-  end
 end
