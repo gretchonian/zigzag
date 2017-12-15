@@ -7,8 +7,4 @@ class SitesController < ApplicationController
     
   end
 
-  def code
-
-  end
-
 end

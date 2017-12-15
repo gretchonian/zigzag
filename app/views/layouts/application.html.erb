@@ -27,10 +27,6 @@
               <li>
                 <%= link_to "Portfolio", portfolio_path, class: "float-right" %>
               </li>
-              <br />
-              <li>
-                <%= link_to "Code Samples", code_path, class: "float-right" %>
-              </li>
             </ul>
           </div>
         </div>
@@ -44,51 +40,40 @@
         <%end%>
       </div> 
       <%= yield %>
-      
     </div>
-      <div class="footer">
-        <div class="footer_all container">
-          <div class="row">
-            <div class="col-md text-center">
-              <u>CONTACT</u>
-              <div>
-                <%= link_to "tel:+1-541-630-4720", class: 'phone' do%>
-                  <i class="fa fa-phone"></i>&nbsp;541-630-4720
-                <% end %>
-              </div>
+    <div class="footer">
+      <div class="footer_all container">
+        <div class="row">
+          <div class="col-md text-center">
+            <u>CONTACT</u>
+            <div>
+              <%= link_to "tel:+1-541-630-4720", class: 'phone' do%>
+                <i class="fa fa-phone"></i>&nbsp;541-630-4720
+              <% end %>
             </div>
-            <br/>
-            <div class="col-md text-center">
-              <u>MESSAGE</u>
-              <div>
-                <%= link_to "mailto:gretchen@zigzagwebdesigns.com" do %> 
-                  <i class="fa fa-envelope"></i>&nbsp;&nbsp;Email
-                <% end %>
-              </div>
-            </div>
-            <br/>
-            <div class="col-md text-center">
-              <u>PORTFOLIO</u>
-              <div>
-                <%= link_to portfolio_path do %> 
-                  <i class="fa fa-file-powerpoint-o"></i>&nbsp;&nbsp;Web Applications
-                <% end %>
-              </div>
-            </div>
-            <br/>
-            <div class="col-md text-center">
-              <u>CODE</u>
-              <div>
-                <%= link_to code_path do %> 
-                  <i class="fa fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;Code Samples
-                <% end %>
-              </div>
-            </div>
-            <br/>
           </div>
+          <br/>
+          <div class="col-md text-center">
+            <u>MESSAGE</u>
+            <div>
+              <%= link_to "mailto:gretchen@zigzagwebdesigns.com" do %> 
+                <i class="fa fa-envelope"></i>&nbsp;&nbsp;Email
+              <% end %>
+            </div>
+          </div>
+          <br/>
+          <div class="col-md text-center">
+            <u>PORTFOLIO</u>
+            <div>
+              <%= link_to portfolio_path do %> 
+                <i class="fa fa-file-powerpoint-o"></i>&nbsp;&nbsp;Web Applications
+              <% end %>
+            </div>
+          </div>
+          <br/>
         </div>
       </div>
-   
+    </div>
   </body>
 </html>
 
